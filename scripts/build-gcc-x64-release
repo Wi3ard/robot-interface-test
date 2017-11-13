@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./cmakegen-gcc-x64-release.sh
+./cmakegen-gcc-x64-release
 
 BUILD_DIR=../build/gcc-x64-release
 pushd $BUILD_DIR

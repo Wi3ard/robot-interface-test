@@ -4,7 +4,7 @@
 BUILD_DIR=../build/gcc-x64-release
 if [ ! -d $BUILD_DIR ]
 then
-	mkdir $BUILD_DIR
+	mkdir -p $BUILD_DIR
 fi
 pushd $BUILD_DIR
 
@@ -16,6 +16,7 @@ conan install \
 	-s os="Linux" \
 	-s build_type="Release" \
 	-s compiler="gcc" \
+	-s compiler.libcxx="libstdc++11" \
 	../..
 
 # Run CMake.

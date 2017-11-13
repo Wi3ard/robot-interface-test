@@ -13,14 +13,6 @@ include(CRTLinkage)
 include(cotire)
 
 #
-# External dependencies.
-#
-
-# Load conan
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-#
 # Project subdirectories.
 #
 

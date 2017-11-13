@@ -12,11 +12,22 @@ if (MSVC)
 endif()
 
 #
+# External dependencies.
+#
+
+# Load Conan configuration.
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+#
 # Source files.
 #
 
 set(SOURCES
-	src/main.cpp)
+	src/Command.h
+	src/main.cpp
+	src/RobotCommand.h
+	src/RobotMock.h)
 
 set(MISC
 	src/pch.h

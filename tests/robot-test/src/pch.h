@@ -14,6 +14,9 @@
 // STL includes and definitions.
 //
 
+#include <memory>
+#include <random>
+
 //////////////////////////////////////////////////////////////////////////
 // Google Test includes and definitions.
 //
@@ -24,4 +27,4 @@
 // robot-sdk library.
 //
 
-//#include <VfsServer.h>
+#include <robot-sdk/IRobot.h>

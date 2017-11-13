@@ -1,0 +1,15 @@
+#!/bin/bash
+
+./cmakegen-gcc-x64-release.sh
+
+BUILD_DIR=../build/gcc-x64-release
+pushd $BUILD_DIR
+
+# Run build.
+echo "[*] Build is running..."
+cmake --build . --config Release
+
+# Exit
+echo "[*] Project build succeeded!"
+popd
+

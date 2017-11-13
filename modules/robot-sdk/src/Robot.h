@@ -20,9 +20,9 @@ public:
 	// Public interface.
 	//
 public:
+	void Beep() override;
 	void Move(double distance) override;
 	void Turn(double angle) override;
-	void Beep() override;
 };
 
 }	// namespace robotsdk

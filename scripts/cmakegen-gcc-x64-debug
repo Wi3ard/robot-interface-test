@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Check build directory.
+BUILD_DIR=../build/gcc-x64-debug
+if [ ! -d $BUILD_DIR ]
+then
+	mkdir $BUILD_DIR
+fi
+pushd $BUILD_DIR
+
+# Run Conan.
+echo "[*] Installing dependencies..."
+conan \
+	--build missing \
+	-s arch="x86_64" \
+	-s os="Linux" \
+	-s build_type="Debug" \
+	-s compiler="gcc" \
+	../..
+
+# Run CMake.
+cmake \
+	-G"CodeBlocks - Unix Makefiles" \
+	"-DCMAKE_CONFIGURATION_TYPES:STRING=Debug" \
+	../..
+
+# Exit
+echo "[*] Project generation succeeded!"
+popd

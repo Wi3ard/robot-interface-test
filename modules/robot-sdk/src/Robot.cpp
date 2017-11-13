@@ -4,15 +4,15 @@
 namespace robotsdk
 {
 
+void Robot::Beep()
+{
+}
+
 void Robot::Move(double /*distance*/)
 {
 }
 
 void Robot::Turn(double /*angle*/)
-{
-}
-
-void Robot::Beep()
 {
 }
 

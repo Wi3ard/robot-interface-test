@@ -26,6 +26,7 @@ conan_basic_setup()
 set(SOURCES
 	src/Command.h
 	src/main.cpp
+	src/MockRobot.h
 	src/RobotCommand.h
 	src/RobotMock.h)
 

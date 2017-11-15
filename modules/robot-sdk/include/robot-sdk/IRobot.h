@@ -6,7 +6,7 @@ namespace robotsdk
 class IRobot
 {
 public:
-	virtual ~IRobot() {}
+	virtual ~IRobot() = default;
 
 	//
 	// Public interface.
